@@ -2,6 +2,8 @@
 layout: default
 ---
 
+Welcome. I am Noah Ats, and this is my Cybersecurity blog. Here, you can find all the work I have been dedicating my time to, including courses, projects, certifications, and more.
+
 Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
 
 [Link to another page](./another-page.html).
