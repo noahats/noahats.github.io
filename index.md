@@ -40,7 +40,7 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 ###### The tip of the iceberg.
 #### Overview
 
-This program provided me with hands-on exposure to the mindset and mechanics necessary for entry-level professionals. It comprises 8 courses, each serving as a stepping stone to form a cohesive whole, building the foundations for both what to expect and how to think in this field. Coursera is the platform used to enroll in this course, an economical option that fulfills a 'go at your own pace' learning platform. There are educational videos, readings, interactive labs, quizzes and exams in each of the 8 courses, along with many resources referenced and linked throughout for further examination. To top it off, completion of this course comes with a 30% off the COMPTIA Security+ certification, a highly respected accolade for individuals yearning to make this industry a profession.
+This program provided hands-on exposure to both the mindset and mechanics necessary for entry-level cybersecurity professionals. It comprises eight courses, each building upon the last to form a cohesive foundation, teaching not just what to expect but how to think in this field. Delivered through Coursera, the program offers a cost-effective, self-paced learning experience. Each course includes instructional videos, readings, interactive labs, quizzes, and exams, with numerous external resources linked for deeper exploration. As a bonus, completion of the program includes a 30% discount on the CompTIA Security+ certification—an industry-recognized credential for those pursuing a professional career in cybersecurity.
 
 
 <!--
