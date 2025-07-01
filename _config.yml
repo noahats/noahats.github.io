@@ -4,6 +4,6 @@ plugins:
 
 title: noahats' CyberSecurity Portfolio
 description: Projects I have been working on.
-show_downloads: true
-google_analytics:
+show_downloads: false
+google_analytics: true
 theme: jekyll-theme-hacker
