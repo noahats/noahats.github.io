@@ -4,6 +4,7 @@ Welcome. I am Noah Ats.
 
 This is my Cybersecurity blog. Here, you can find all the work I have been dedicating my time to, including courses, projects, certifications, and more. This will serve as a personal portfolio for pertinent work curated to develop skills and experience within the realm of Cybersecurity.
 
+Focus: | Security Operations | Threat Detection | Incident Response | 
 
 ---
 
