@@ -1,6 +1,31 @@
 
 
-Welcome. I am Noah Ats, and this is my Cybersecurity blog. Here, you can find all the work I have been dedicating my time to, including courses, projects, certifications, and more.
+Welcome. I am Noah Ats. 
+
+This is my Cybersecurity blog. Here, you can find all the work I have been dedicating my time to, including courses, projects, certifications, and more. This will serve as a personal portfolio for pertinent work curated to develop skills and experience within the realm of Cybersecurity.
+
+---
+
+* Active Directory Project(Pending)
+
+* SYWTBSA Project(Pending)
+
+* COMPTIA Security+ Certification(Pending)
+
+* TryHackMe SOC Level 1 Learning Path
+
+* 30-Day SOC Analyst Challenge
+
+* TryHackMe Cybersecurity 101 Path
+
+* Cisco Security Operations Specialization Certificate
+
+* [Google Cybersecurity Certificate](#google-cybersecurity-professional-certificate)
+
+---
+
+## Google Cybersecurity Professional Certificate
+
 
 <!--
 
