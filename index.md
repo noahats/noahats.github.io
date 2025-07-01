@@ -38,6 +38,10 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ## Google Cybersecurity Professional Certificate
 ###### The tip of the iceberg.
+#### Overview
+
+This program provided me with hands-on exposure to the mindset and mechanics necessary for entry-level professionals. It comprises 8 courses, each serving as a stepping stone to form a cohesive whole, building the foundations for both what to expect and how to think in this field. Coursera is the platform used to enroll in this course, an economical option that fulfills a 'go at your own pace' learning platform. There are educational videos, readings, interactive labs, quizzes and exams in each of the 8 courses, along with many resources referenced and linked throughout for further examination. To top it off, completion of this course comes with a 30% off the COMPTIA Security+ certification, a highly respected accolade for individuals yearning to make this industry a profession.
+
 
 <!--
 
