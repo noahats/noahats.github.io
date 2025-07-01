@@ -1,10 +1,12 @@
----
-layout: default
----
+
 
 Welcome. I am Noah Ats, and this is my Cybersecurity blog. Here, you can find all the work I have been dedicating my time to, including courses, projects, certifications, and more.
 
 <!--
+
+---
+layout: default
+---
 
 The following is the default text that came with this page.
 
