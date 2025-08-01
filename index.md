@@ -10,19 +10,39 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 * Active Directory Project(Pending)
 
-* SYWTBSA Project(Pending)
+* [SYWTBSA Project](#sywtbsa-project)
 
-* COMPTIA Security+ Certification(Pending)
+* [CompTIA Security+ Certification](#CompTIA-Security+-Certification)
 
-* TryHackMe SOC Level 1 Learning Path
+* [TryHackMe SOC Level 1 Learning Path](#tryhackme-soc-level-1-learning-path)
 
-* 30-Day SOC Analyst Challenge
+* [30-Day SOC Analyst Challenge](#30-day-soc-analyst-challenge)
 
 * [TryHackMe Cybersecurity 101 Path](#tryhackme-cybersecurity-101-path)
 
-* [Cisco Security Operations Specialization](#cisco-Cybersecurity-Operations-Fundamentals-Specialization-Certificate)
+* [Cisco Security Operations Specialization](#Cisco-Cybersecurity-Operations-Fundamentals-Specialization-Certificate)
 
 * [Google Cybersecurity Certificate](#google-cybersecurity-professional-certificate)
+
+---
+
+## SYWTBSA Project
+###### A different SecOps simulation with new tools.
+
+---
+
+## CompTIA Security+ Certification
+###### Putting security knowledge to the test.
+
+---
+
+## TryHackMe SOC Level 1 Learning Path
+###### Preparing for a variety of SOC threats.
+
+---
+
+## 30-Day SOC Analyst Challenge
+###### Diving deep into a practical SIEM environment.
 
 ---
 
