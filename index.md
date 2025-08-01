@@ -10,6 +10,8 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ---
 
+* TryHackMe Security Engineer Learning Path(Pending)
+
 * Active Directory Project(Pending)
 
 * [SYWTBSA Project](#sywtbsa-project)
