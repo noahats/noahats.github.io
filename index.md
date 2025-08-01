@@ -77,19 +77,19 @@ This program provided hands-on exposure to both the mindset and mechanics necess
 
 ### 1. **Foundations of Cybersecurity**
 
-
+This first course is all about introducing the original concept of cybersecurity and what it means to be a cybersecurity professional. The paths individuals can take, important soft skills, relevant terminology are all captured here. Some of these include the CIA triad, SIEM tools, and packet sniffers. It is also emphasized that having valuable soft skills go a long way, cybersecurity is not just a technical field, communication plays an important role. Many Google employees share testimonials showing the student that he/she does not need to always have been in IT to make it in cybersecurity. Google is focused on engaging with the student in a way that evokes actionable progress while correcting misconceptions about the industry.
 
 ### 2. **Play It Safe: Manage Security Risks**
 
-
+Cybersecurity professionals are always thinking about risks, how to identify, manage, and reduce them. This course covers many concepts through the lense of risk management. These include: vulnerabilities, threats, impacts, assessments, regulatory frameworks, compliance, business continuity, incident response phases, OWASP, NIST CSF, and SIEM tools such as Splunk. The student is able to become familiarized with some of the lingo used in the industry as it is consistently repeated and built upon not only later in this course but also throughout the domains of cyber.
 
 ### 3. **Connect & Protect: Networks**
 
-
+Networking is one of the most fundamental parts of cybersecurity work. The importance of understanding how computers communicate and send data from one to another cannot be overstated. Critical foundations of TCP, UDP, IP and such protocols gets mentioned here. Ports and packets are also introduced and how they are inspected with tools like Wireshark and IDS/IPS. Often times networking becomes a point of friction for those learning cybersecurity, because of how technical it seems, looking at tons of numbers and acronyms all which can easily happen hundreds of times a second. Google is careful to address the concept of networking attentively and keep the student engaged throughout.
 
 ### 4. **Tools of the Trade: Linux & SQL**
 
-
+This may be the best portion of the entire certificate, certainly one of the most engaging portions.
 
 ### 5. **Assets, Threats & Vulnerabilities**
 
@@ -113,6 +113,8 @@ This certificate is an easy choice for self-starters curious about the cybersecu
 What makes this course stand out is its clear delivery of foundational concepts and essential terminology. From the CIA triad and defense-in-depth to risk assessment and common attack types, students are introduced to the day-to-day thinking of security professionals. Terms like threat vectors, encryption, firewalls, and IDS/IPS are demystified, laying the groundwork for future technical mastery. The program also covers networking basics, operating system fundamentals (Windows and Linux), common threat types and vulnerabilities, and the phases of incident response—core pillars that span multiple cybersecurity domains. Exposure to scripting and automation using Python hints at how professionals can streamline repetitive but necessary workflows.
 
 This program serves as a strong launchpad for those exploring cybersecurity and discovering opportunities they may not have considered before. From here, students are encouraged to take initiative: build a portfolio, pursue hands-on labs, earn certifications like CompTIA Security+, and connect with professionals in the industry—online or within their communities. With discipline, curiosity, and deliberate action, a real career in cybersecurity is well within reach.
+
+##### _Completion Date: October 1, 2024_
 
 <!--
 
