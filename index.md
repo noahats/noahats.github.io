@@ -61,7 +61,7 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ## Google Cybersecurity Professional Certificate
 ###### The tip of the iceberg.
-
+<br>
 
 ### **Overview**
 
