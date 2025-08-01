@@ -32,31 +32,37 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ## SYWTBSA Project
 ###### A different SecOps simulation with new tools.
+<br>
 
 ---
 
 ## CompTIA Security+ Certification
 ###### Putting security knowledge to the test.
+<br>
 
 ---
 
 ## TryHackMe SOC Level 1 Learning Path
 ###### Preparing for a variety of SOC threats.
+<br>
 
 ---
 
 ## 30-Day SOC Analyst Challenge
 ###### Diving deep into a practical SIEM environment.
+<br>
 
 ---
 
 ## TryHackMe Cybersecurity 101 Path
 ###### Strengthening foundations to patch a leaky lifeboat.
+<br>
 
 ---
 
 ## Cisco Cybersecurity Operations Fundamentals Specialization Certificate
 ###### Discovering the depth of the Security Operations domain.
+<br>
 
 ---
 
