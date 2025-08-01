@@ -6,6 +6,8 @@ This is my Cybersecurity blog. Here, you can find all the work I have been dedic
 
 Focus: | Security Operations | Threat Detection | Incident Response | 
 
+###### Currently utilizing a lean, one-page format before optimizing.
+
 ---
 
 * Active Directory Project(Pending)
