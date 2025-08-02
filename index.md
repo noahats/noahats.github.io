@@ -101,7 +101,7 @@ Moving on to course 6, where the security operations principles of threat detect
 
 ### 7. **Automate Cyber Tasks with Python**
 
-Course 7 began to shake things up a bit by introducing automation through Python and its growing role in modern cybersecurity workflows. This portion proved useful for covering fundamental programming concepts, including variables, data types, conditionals, booleans, loops, and functions. It applied these concepts to the goal of automating useful tasks, such as parsing logs, extracting data, manipulating files, and interacting with APIs. 
+Course 7 began to shake things up a bit by introducing automation through Python and its growing role in modern cybersecurity workflows. This portion proved useful for covering fundamental programming concepts, including variables, data types, conditionals, booleans, loops, and functions. It applied these concepts to the goal of automating useful tasks, such as parsing logs, extracting data, manipulating files, and interacting with APIs. By sequentially building upon first principles,
 
 ### 8. **Put It to Work: Prepare for Cybersecurity Jobs**
 
