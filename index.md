@@ -81,11 +81,11 @@ This first course introduces the core concept of cybersecurity and what it means
 
 ### 2. **Play It Safe: Manage Security Risks**
 
-Cybersecurity professionals are constantly assessing how to identify, manage, and reduce risk. This course presents many foundational ideas through the lens of risk management. Topics include vulnerabilities, threats, impacts, assessments, regulatory frameworks, compliance, business continuity, OWASP, the NIST Cybersecurity Framework, defense-in-depth, least privilege, and SIEM tools like Splunk. It also explores human-centered risks such as social engineering and insider threats. Industry terminology is introduced and consistently reinforced throughout, helping students become comfortable with the language of cybersecurity as they progress through the program and beyond in the various domains of cyber.
+Cybersecurity professionals are constantly assessing how to identify, manage, and reduce risk. This course presents many foundational ideas through the lens of risk management. Topics include vulnerabilities, threats, impacts, assessments, regulatory frameworks, compliance, business continuity, OWASP, the NIST Cybersecurity Framework, defense-in-depth, least privilege, and SIEM tools like Splunk. It also explores human-centered risks such as social engineering and insider threats. Industry terminology is introduced and consistently reinforced throughout, helping students become comfortable with the language of cybersecurity as they progress through the program and beyond in the various cyber domains.
 
 ### 3. **Connect & Protect: Networks**
 
-Networking is one of the most fundamental aspects of cybersecurity. Understanding how computers communicate and exchange data is critical to identifying and mitigating threats. This course introduces key protocols such as TCP, UDP, IP, HTTP, and DNS, as well as the roles of ports and packets. Tools like Wireshark and IDS/IPS are used to inspect network traffic. The OSI model is presented as a conceptual framework for understanding how network communication works across layers, and security risks at each layer—such as DDoS attacks, spoofing, and sniffing—are discussed. While networking can often feel dense or technical, Google presents the material in a digestible and engaging way.
+Networking is one of the most fundamental aspects of cybersecurity. Understanding how computers communicate and exchange data is critical to identifying and mitigating threats. This course introduces key protocols as TCP, UDP, IP, HTTP, and DNS, as well as the roles of ports and packets. Tools like Wireshark and IDS/IPS are used to inspect network traffic. The OSI model is presented as a conceptual framework for understanding how network communication works across layers, and security risks at each layer—such as DDoS attacks, spoofing, and sniffing—are discussed. While networking can often feel dense or technical, Google presents the material in a digestible and engaging way.
 
 ### 4. **Tools of the Trade: Linux & SQL**
 
@@ -93,15 +93,15 @@ I genuinely enjoyed this part of the certificate; it was one of the most engagin
 
 ### 5. **Assets, Threats & Vulnerabilities**
 
-
+This course focuses on a key responsibility of cybersecurity professionals: identifying and protecting valuable assets while understanding the threats and vulnerabilities that could compromise them. The material covers how to classify assets as physical, digital, or human, and assess their importance to the organization while considering associated risks. Threats such as malware, phishing, ransomware, and insider threats all have the potential to disrupt business operations. Vulnerabilities like unpatched software, misconfiguration, and weak credentials can expose critical systems to exploitation by these threats. This course builds on this reality by introducing threat modeling techniques, such as PASTA, TRIKE, and VAST, along with risk analysis strategies that help students think critically about prioritizing risks. A hands-on lab guides students through a vulnerability assessment to put this into practice. The Common Vulnerability Scoring System (CVSS) is also touched upon to make sense of valuing vulnerabilities in the real world.
 
 ### 6. **Sound the Alarm: Detection & Response**
 
-
+Moving on to course 6, where the security operations principles of threat detection and incident response come into play. This course spoke towards working in a SOC, with the reintroduction of Security Information and Event Management (SIEM) tools, now given the proper daylight to showcase their relevance. The material covers log files from various systems being aggregated into a single platform, which can generate alerts for finding indicators of compromise (IOCs). SIEMs enable analysts to find suspicious activity in real-time and are involved in the phases of the incident response lifecycle: preparation, detection, analysis, containment, eradication, recovery, and post-incident review. This course emphasizes documentation throughout the lifecycle and communication during incidents, reiterating that cybersecurity is not only a technical but also prodecural discipline. By the end, students gain a clear comprehension of how cyber defenders process daily workflows during this course.
 
 ### 7. **Automate Cyber Tasks with Python**
 
-
+Course 7 began to shake things up a bit by introducing automation through Python and its growing role in modern cybersecurity workflows. This portion proved useful for covering fundamental programming concepts, including variables, data types, conditionals, booleans, loops, and functions. It applied these concepts to the goal of automating useful tasks, such as parsing logs, extracting data, manipulating files, and interacting with APIs. 
 
 ### 8. **Put It to Work: Prepare for Cybersecurity Jobs**
 
