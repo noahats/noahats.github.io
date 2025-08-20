@@ -40,6 +40,33 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 ###### Putting security knowledge to the test.
 <br>
 
+### **The First Security Checkpoint**
+
+I have recently passed the Security+ 701 examination. This certification is a well-recognized industry standard for individuals entering the cybersecurity field. It serves to signal a comprehensive understanding of security fundamentals across endpoints, networks, and policies. CompTIA is a well-respected certification provider in the industry, offering a variety of exams for both prospective and established professionals. Notably, these include A+, Network+, and Security+, which are considered a triplet of valuable certs for individuals in my situation. I felt comfortable with the A+ exam topics after attempting practice exams did not feel it was worth the investment given my knowledge and study regimen. As for Network+, that may still be in the cards down the road. Security+ matters because it acts as a de facto entry ticket for SOC analysts (which, at the time of writing am striving toward) by validating conceptual security knowledge. It is also recognized by DoD 8570/8140 as a required baseline for governmental and military cybersecurity roles. The exam covers a broad survey of topics, enabling participants to be confident they understand security language to a valuable extent, which signals well with hiring managers.
+
+### **What Sec+ Covers**
+
+There are 5 domains on the exam.
+1. **General security concepts** - CIA triad, cryptographic solutions, security controls.
+1. **Threats, vulnerabilities, and mitigations** - malware, threat actors, threat vectors, exploits, mitigation techniques.
+1. **Security architecture** - systems architectural models, enterprise infrastructure, resilience and recovery, data protection.
+1. **Security operations** - asset and vulnerability management, SIEMs, incident response, monitoring, automation and orchestration, forensics basics.
+1. **Security program management and oversight** - governance, risk management, compliance, security awareness, audits and assessments.
+
+The exam is 90 minutes, with a passing score being 750 out of 900 total. Students also get 100 points just for writing their name. Since the scale starts with a floor of 100, students need 650 out of the remaining 800 points to pass, which equates to 81.25%. Mentioning this comes with a major caveat: the test is not entirely multiple choice. Usually administered exams have 50-75 or so multiple-choice questions, while having up to 5 performance-based questions. The more PBQs, the fewer multiple-choice and vice versa seems to be the structure many test-takers have experienced. The PBQs can include configuring a firewall's rules, identifying multiple malware types and their best remediation techniques, or designing a network architecture and selecting proper protocols and cryptography algorithms, but many other possible questions should be considered.
+
+### **How I prepared**
+
+Before I was ready to study for the exam itself, I would sometimes watch what YouTube creators had to say about the exam. This gave me the confidence that with proper preparation, I would be able to pass this exam, even as someone with weak corporate IT experience. The first step was to check out ExamCompass, a website that hosts many practice tests for certifications like this and many more, to gain an understanding of my knowledge gap. After doing this for about a week or two, I realized that ExamCompass's tests and quizzes were often beyond the scope of the actual Security+ exam. This didn't seem like an efficient way to spend my time, which led me to decide to watch Professor Messer's Security+ 701 course on YouTube. Upon completion, I turned to more practice exams to gauge my probability of passing CompTIA's exam. Here is when I used CertPrep, an online website hosting free and paid-for practice exams for many certifications, similar to ExamCompass. I didn't particularly like the quality of these tests while gettomg below satisfactory grades, leaving me yearning for some better material. This is when I decided I would enroll in Jason Dion's Security+ course and take some of his company's practice tests under a Udemy free trial while also booking my exam date for the day after this trial would expire. By this point, either I knew it or I didn't. Dion's practice exams were well-made and should prepare me well enough that I wouldn't need more material. Dion's tests mimicked the Security+ well enough, even slightly beyond in difficulty and towards the end of the Udemy free trial, I was cruising through high 80%-90% scores on these practice tests. Throughout the last two weeks of this month-or-so of studying, I was also viewing some sample PBQ questions from a variety of YouTube creators, pausing to work on the question and reviewing my answer later in the video.  Luckily, this study plan worked out, and I was able to pass, given a month or so of study time.
+
+### **Takeaways**
+
+I can honestly say Security+ gave me a bit of a run for my money. There were some multiple-choice questions that I felt very comfortable answering, but others I struggled to define the best answer, trying hard to avoid distractor options. I am usually a confident test taker, but with the variety of material covered, it was hard to be convinced of my answer choices. There's plenty of nuance to think about within each question. I was surprised by the complexity of the PBQ questions I received, and this was a gap in my studying. I felt the least confident answering those questions, taking plenty of time to think my choices thoroughly.
+
+Security+ is less about depth and more about breadth. Exam takers are expected to know a little about everything, from AES encryption to compliance frameworks like PCI DSS to what a logic bomb is. This certification also gave me a framework to understand my past and future projects. When working through SIEM labs, it made sense to link each task to the bigger picture outlined by Security+. Although this certificate doesn't make anyone a SOC or GRC analyst, it provides proof of a baseline to start training like one if you haven't already. A crucial part of this exam is that it helps resumes get through initial HR filters, at least in 2025. With the completion of Security+, there is even more momentum gained to become an even better cybersecurity professional. Passing this milestone was a sigh of relief and gave me more motivation to keep studying every day.
+
+##### _Completion Date: July 30th, 2025_
+
 ---
 
 ## TryHackMe SOC Level 1 Learning Path
