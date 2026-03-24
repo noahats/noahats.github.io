@@ -22,6 +22,8 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 * [ELK Stack Simulation](#elk-stack-simulation)
 
+* [Azure Sentinel Honeypot](#azure-sentinel-honeypot)
+
 * [TryHackMe Cybersecurity 101 Path](#tryhackme-cybersecurity-101-path)
 
 * [Cisco Security Operations Specialization](#Cisco-Cybersecurity-Operations-Fundamentals-Specialization-Certificate)
@@ -77,6 +79,12 @@ Security+ is less about depth and more about breadth. Exam takers are expected t
 
 ## ELK Stack Simulation
 ###### Diving deep into a practical SIEM environment.
+<br>
+
+---
+
+## Azure Sentinel Honeypot
+###### Casting a net in the wild.
 <br>
 
 ---
