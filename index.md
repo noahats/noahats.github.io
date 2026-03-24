@@ -30,7 +30,7 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ---
 
-## SYWTBSA Project
+## EDR Response Lab
 ###### A different SecOps simulation with new tools.
 <br>
 
