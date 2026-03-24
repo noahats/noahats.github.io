@@ -14,13 +14,13 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 * Active Directory Project(Pending)
 
-* [SYWTBSA Project](#sywtbsa-project)
+* [EDR Response Lab](#edr-response-lab)
 
 * [CompTIA Security+ Certification](#CompTIA-Security+-Certification)
 
 * [TryHackMe SOC Level 1 Learning Path](#tryhackme-soc-level-1-learning-path)
 
-* [30-Day SOC Analyst Challenge](#30-day-soc-analyst-challenge)
+* [ELK Stack Simulation](#elk-stack-simulation)
 
 * [TryHackMe Cybersecurity 101 Path](#tryhackme-cybersecurity-101-path)
 
@@ -75,7 +75,7 @@ Security+ is less about depth and more about breadth. Exam takers are expected t
 
 ---
 
-## 30-Day SOC Analyst Challenge
+## ELK Stack Simulation
 ###### Diving deep into a practical SIEM environment.
 <br>
 
