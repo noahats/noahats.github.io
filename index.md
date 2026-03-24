@@ -10,6 +10,10 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 
 ---
 
+* [Proxmox Home Server](#proxmox-home-server)
+
+* [Pi-Hole DNS Home Server](#pi-hole-dns-server)
+
 * TryHackMe Security Engineer Learning Path(Pending)
 
 * Active Directory Project(Pending)
@@ -29,6 +33,18 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 * [Cisco Security Operations Specialization](#Cisco-Cybersecurity-Operations-Fundamentals-Specialization-Certificate)
 
 * [Google Cybersecurity Certificate](#google-cybersecurity-professional-certificate)
+
+---
+
+## Proxmox Home Server
+###### Pushing boundaries to more accurately simulate live environments.
+<br>
+
+---
+
+## Pi-Hole DNS Server
+####### Exploring networking in real time and concerns with uptime/reliability.
+<br>
 
 ---
 
