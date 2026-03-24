@@ -43,7 +43,7 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 ---
 
 ## Pi-Hole DNS Server
-####### Exploring networking in real time and concerns with uptime/reliability.
+###### Exploring networking in real time and concerns with uptime/reliability.
 <br>
 
 ---
