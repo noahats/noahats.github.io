@@ -100,7 +100,7 @@ Security+ is less about depth and more about breadth. Exam takers are expected t
 ---
 
 ## Azure Sentinel Honeypot
-###### Casting a net in the wild.
+###### Casting a net in the wild and catching live fish.
 <br>
 
 ---
