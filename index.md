@@ -40,17 +40,29 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 ###### Pushing boundaries to more accurately simulate live environments.
 <br>
 
+Built a Proxmox-based home server environment to support virtualization, lab isolation, and long-term security experimentation across multiple VMs and services. This server became the foundation for broader SOC/DFIR lab work, including Linux infrastructure, intentionally vulnerable services, SIEM tooling, honeypots, and an evolving narrative-driven environment meant to simulate operational failure, attacker activity, and incident response in a realistic way.
+
+TBC
+
 ---
 
 ## Pi-Hole DNS Server
 ###### Exploring networking in real time and concerns with uptime/reliability.
 <br>
 
+Deployed a Raspberry Pi 5 home DNS stack using Pi-hole with Unbound as a recursive resolver to provide network-wide ad and tracker blocking with local DNS resolution. The setup includes router-level integration, DNSSEC validation, production-like stability goals, and planned enhancements such as Tailscale for secure remote access, Grafana for metrics, and selective whitelisting for application compatibility.
+
+TBC
+
 ---
 
 ## EDR Response Lab
 ###### A different SecOps simulation with new tools.
 <br>
+
+Built an endpoint detection and response lab using LimaCharlie for telemetry and detection visibility alongside Sliver C2 to emulate adversary behavior and generate realistic endpoint activity. The lab was designed to better understand how attacker actions appear from the defender’s side, with emphasis on detection opportunities, response workflows using YARA rules, and the relationship between offensive tradecraft and defensive responsibilities.
+
+TBC
 
 ---
 
@@ -91,11 +103,19 @@ Security+ is less about depth and more about breadth. Exam takers are expected t
 ###### Preparing for a variety of SOC threats.
 <br>
 
+Completed the TryHackMe SOC Level 1 learning path to build practical familiarity with core SOC workflows, including alert triage, log investigation, threat detection concepts, and incident analysis. The path provided experience with various platforms and developing analyst skills by exposing me to common blue-team tasks and security operations thinking used in real-world monitoring environments. Between digesting packet captures, a variety of SIEM/IDS/EDR tools, and forensics tools, this path provided plenty of exposure to how core SOC work is done, while also amply diving into OS fundamentals in Windows and Linux and how they are important for cybersecurity.
+
+TBC
+
 ---
 
 ## ELK Stack Simulation
 ###### Diving deep into a practical SIEM environment.
 <br>
+
+Used Vultr to host a VPC and then built an ELK Stack lab environment to simulate security monitoring and investigation workflows using Elasticsearch, Logstash, and Kibana. This project gave hands-on experience with log collection, search and visualization, and basic detection-oriented analysis, while reinforcing transferable SIEM concepts outside of a single vendor ecosystem. Used Mythic C2 to deploy Apollo payload and compromise victim machines. Implemented osTicket to create a mock SOC analyst environment, documenting the closure or escalation of tickets, consulting dashboards, and refining ES|QL queries to trace process correlation.
+
+TBC
 
 ---
 
@@ -103,17 +123,29 @@ Security+ is less about depth and more about breadth. Exam takers are expected t
 ###### Casting a net in the wild and catching live fish.
 <br>
 
+Built a Microsoft Sentinel lab centered on log ingestion, alerting, and investigation workflows, using a honeypot-style setup to generate security-relevant events for analysis. The project focused on learning how to onboard telemetry, query data, create detections, and use Sentinel as a cloud-native SIEM for practical SOC-style investigations. Also imported data to create a live visual dashboard for login attempts.
+
+TBC
+
 ---
 
 ## TryHackMe Cybersecurity 101 Path
 ###### Strengthening foundations to patch a leaky lifeboat.
 <br>
 
+Completed the TryHackMe Cybersecurity 101 path to strengthen foundational knowledge across core security concepts, attack surfaces, defensive controls, and common operational terminology. This served as an entry-level hands-on foundation that supported later work in SOC analysis, detection engineering, and lab-based security projects.
+
+TBC
+
 ---
 
 ## Cisco Cybersecurity Operations Fundamentals Specialization Certificate
 ###### Discovering the depth of the Security Operations domain.
 <br>
+
+Completed Cisco’s Cybersecurity Operations Fundamentals Specialization on Coursera to build a more structured understanding of security operations, network defense, and analyst responsibilities in enterprise environments. The coursework reinforced key blue-team concepts such as monitoring, incident response, and security operations processes in a more formal, vendor-backed learning track.
+
+TBC
 
 ---
 
