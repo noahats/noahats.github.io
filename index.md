@@ -131,21 +131,27 @@ The purpose of this lab was to use a SOC data pipeline to record real brute forc
 
 ## **Architecture**
 
-Public Internet (attackers) -->
-      
-[Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100) -- >
-       
+```
+Public Internet (attackers)
+  |
+  V
+[Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100)
+    |
+    V
 [Windows 10 VM "corpnet-east-1"]
    * Local Windows Firewall disabled (Domain/Private/Public)
    * Azure Monitor Agent (AMA) extension installed
-   *  Security Events forwarded via Data Collection Rule -->
-        
-[Log Analytics Workspace] ──── SecurityEvent table -->
-        
+   * Security Events forwarded via Data Collection Rule
+      |
+      V
+[Log Analytics Workspace] ──── SecurityEvent table
+        |
+        V
 [Microsoft Sentinel]
    * KQL queries against SecurityEvent
    * geoip Watchlist joined on IP → city / country / lat / long
    * Workbook: world map of failed-logon volume by source country
+```
 
 ## **Implementation**
 
@@ -178,6 +184,7 @@ Verified end-to-end exposure by ping-ing the VM's public IP from a local termina
 
 Once the SecurityEvent table was populated, I narrowed the noise to failed authentications and projected only the fields that mattered:
 
+KQL
 ```KQL
 SecurityEvent
 | where EventID == 4625 // "An account failed to log on"
@@ -194,7 +201,8 @@ Raw SecurityEvent rows contain an IP address but no geographic context. To enric
      * Verified it landed correctly with _GetWatchlist("geoip").
      * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
 
-``` KQL
+KQL
+```KQL
 let GeoIPDB = _GetWatchlist("geoip");
 SecurityEvent
 | where EventID == 4625
