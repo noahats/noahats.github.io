@@ -240,7 +240,7 @@ The resulting workbook surfaces the dominant source countries at a glance, usefu
 * KQL: filtering, projection, time-range scoping, watchlist joins via ipv4_lookup, field renaming
 * Threat-intelligence enrichment workflows via Sentinel Watchlists.
 * Security data visualization with Sentinel Workbooks.
-* Reading Windows Security even schemas (Event IDs, logon types, account fields).
+* Reading Windows Security event schemas (Event IDs, logon types, account fields).
 
 ## **Limitations & next steps**
 
