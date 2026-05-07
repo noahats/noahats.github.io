@@ -197,9 +197,9 @@ Within hours of the VM being exposed, this query was returning thousands of fail
 ### 5. Geo-enrichment via Sentinel Watchlist
 
 Raw SecurityEvent rows contain an IP address but no geographic context. To enrich them inside the SIEM rather than externally, I did a few things:
-     * Imported a SCV mapping IP network blocks (CIDR) to city, country, latitude, and longitude as a Sentinel Watchlist (geoip, search key: network).
-     * Verified it landed correctly with _GetWatchlist("geoip").
-     * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
+   * Imported a SCV mapping IP network blocks (CIDR) to city, country, latitude, and longitude as a Sentinel Watchlist (geoip, search key: network).
+   * Verified it landed correctly with _GetWatchlist("geoip").
+   * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
 
 KQL
 ```KQL
