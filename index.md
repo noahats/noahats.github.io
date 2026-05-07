@@ -176,7 +176,7 @@ Verified end-to-end exposure by ping-ing the VM's public IP from a local termina
 ### 3. Centralized log pipeline
    * Created a Log Analytics Workspace (law-soc-lab) in the same region and Resource Group.
    * Deployed Microsoft Sentinel on top of the workspace.
-   * From Sentinel's Content Hub, installed the WIndows Security Events via AMA connector.
+   * From Sentinel's Content Hub, installed the Windows Security Events via AMA connector.
    * Created a Data Collection Rule (DCR-Windows) targeting the honeypot VM and configured it to collect all security events rather than only the "common" subset, so failed-logon and account-management activity wouldn't be filtered out at ingest.
    * Verified the Azure Monitor Agent extension installed on the VM (Settings -> Extensions -> status: Provisioning succeeded) and confirmed log flow into the SecurityEvent table after a short delay.
   
