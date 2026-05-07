@@ -131,24 +131,21 @@ The purpose of this lab was to use a SOC data pipeline to record real brute forc
 
 ## **Architecture**
 
-Public Internet (attackers)
-        │
-        ▼
-[Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100)
-        │
-        ▼
-[Windows 10 VM "corpnet-east-1"]
-   • Local Windows Firewall disabled (Domain/Private/Public)
-   • Azure Monitor Agent (AMA) extension installed
-        │ Security Events forwarded via Data Collection Rule
-        ▼
-[Log Analytics Workspace] ──── SecurityEvent table
-        │
-        ▼
-[Microsoft Sentinel]
-   • KQL queries against SecurityEvent
-   • geoip Watchlist joined on IP → city / country / lat / long
-   • Workbook: world map of failed-logon volume by source country
+- Public Internet (attackers) -->
+      
+- [Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100) -- >
+       
+- [Windows 10 VM "corpnet-east-1"]
+   * Local Windows Firewall disabled (Domain/Private/Public)
+   * Azure Monitor Agent (AMA) extension installed
+   *  Security Events forwarded via Data Collection Rule -->
+        
+- [Log Analytics Workspace] ──── SecurityEvent table -->
+        
+- [Microsoft Sentinel]
+   * KQL queries against SecurityEvent
+   * geoip Watchlist joined on IP → city / country / lat / long
+   * Workbook: world map of failed-logon volume by source country
 
 ## **Implementation**
 
@@ -161,7 +158,7 @@ Public Internet (attackers)
 2. Turning the VM into a honeypot
    - Two deliberate exposures:
      * Network Security Group: deleted the default rule that only permitted RDP and replaced it with a single custom inbound rule               (prefixed DANGER_ for clarity) written as such: 
-       - Source: Any, Source port: Any, Destination: Any, Destination port: *, Protocol: Any, Priority: 100. Every Azure warning this rule throws is what we are looking for.
+       - Source: Any, Source port: Any, Destination: Any, Destination port: Any, Protocol: Any, Priority: 100. Every Azure warning this rule throws is what we are looking for.
      * Host firewall: RDP'd into the VM and disabled Windows Defender Firewall across Domain, Private, and Public profiles via wf.msc.
    - Verified end-to-end exposure by ping-ing the VM's public IP from a local terminal and confirming ICMP replies, proof that the             network path was wide open before any logging was wired up.
 
