@@ -120,7 +120,7 @@ TBC
 ---
 
 ## Azure Sentinel Honeypot
-###### Casting a net in the wild and catching live fish.
+###### Using bait to catch fish in the wild.
 <br>
 
 ## **Overview**
