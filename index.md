@@ -149,37 +149,45 @@ The purpose of this lab was to use a SOC data pipeline to record real brute forc
 
 ## **Implementation**
 
-1. Azure infrastructure
-   - Provisioned the lab inside a single Resource Group (rg-soc-lab, East US 2):
-     * Virtual network and default subnet
-     * Windows 10 VM named with an innocuous label (corpnet-east-1) rather than something like (honeypot-01) 
-     * Standard SKU disk, NIC, public IP, and NSG auto-created with the VM
+### 1. Azure infrastructure
 
-2. Turning the VM into a honeypot
-   - Two deliberate exposures:
-     * Network Security Group: deleted the default rule that only permitted RDP and replaced it with a single custom inbound rule               (prefixed DANGER_ for clarity) written as such: 
-       - Source: Any, Source port: Any, Destination: Any, Destination port: Any, Protocol: Any, Priority: 100. Every Azure warning this rule throws is what we are looking for.
-     * Host firewall: RDP'd into the VM and disabled Windows Defender Firewall across Domain, Private, and Public profiles via wf.msc.
-   - Verified end-to-end exposure by ping-ing the VM's public IP from a local terminal and confirming ICMP replies, proof that the             network path was wide open before any logging was wired up.
+Provisioned the lab inside a single Resource Group (rg-soc-lab, East US 2):
 
-3. Centralized log pipeline
-    * Created a Log Analytics Workspace (law-soc-lab) in the same region and Resource Group.
-    * Deployed Microsoft Sentinel on top of the workspace.
-    * From Sentinel's Content Hub, installed the WIndows Security Events via AMA connector.
-    * Created a Data Collection Rule (DCR-Windows) targeting the honeypot VM and configured it to collect all security events rather than only the "common" subset, so failed-logon and account-management activity wouldn't be filtered out at ingest.
-    * Verified the Azure Monitor Agent extension installed on the VM (Settings -> Extensions -> status: Provisioning succeeded) and confirmed log flow into the SecurityEvent table after a short delay.
+   * Virtual network and default subnet
+   * Windows 10 VM named with an innocuous label (corpnet-east-1) rather than something like (honeypot-01) 
+   * Standard SKU disk, NIC, public IP, and NSG auto-created with the VM
+
+### 2. Turning the VM into a honeypot
+
+Two deliberate exposures:
+
+   * Network Security Group: deleted the default rule that only permitted RDP and replaced it with a single custom inbound rule (prefixed DANGER_ for clarity) written as such: 
+     - Source: Any, Source port: Any, Destination: Any, Destination port: Any, Protocol: Any, Priority: 100. Every Azure warning this rule throws is what we are looking for.
+   * Host firewall: RDP'd into the VM and disabled Windows Defender Firewall across Domain, Private, and Public profiles via wf.msc.
+     
+Verified end-to-end exposure by ping-ing the VM's public IP from a local terminal and confirming ICMP replies, proof that the network path was wide open before any logging was wired up.
+
+### 3. Centralized log pipeline
+   * Created a Log Analytics Workspace (law-soc-lab) in the same region and Resource Group.
+   * Deployed Microsoft Sentinel on top of the workspace.
+   * From Sentinel's Content Hub, installed the WIndows Security Events via AMA connector.
+   * Created a Data Collection Rule (DCR-Windows) targeting the honeypot VM and configured it to collect all security events rather than only the "common" subset, so failed-logon and account-management activity wouldn't be filtered out at ingest.
+   * Verified the Azure Monitor Agent extension installed on the VM (Settings -> Extensions -> status: Provisioning succeeded) and confirmed log flow into the SecurityEvent table after a short delay.
   
-4. Hunting failed logons with KQL
-  - Once the SecurityEvent table was populated, I narrowed the noise to failed authentications and projected only the fields that mattered:
+### 4. Hunting failed logons with KQL
+
+Once the SecurityEvent table was populated, I narrowed the noise to failed authentications and projected only the fields that mattered:
     - Written in KQL
       - SecurityEvent
       - | where EventID == 4625 // "An account failed to log on"
       - | where TimeGenerated > ago(1h)
       - | project TimeGenerated, Computer, Account, IpAddress, Activity
-   - Within hours of the VM being exposed, this query was returning thousands of failed-logon attempts per hour from across the public internet. Spot checking source IPs through manual geo-IP lookups confirmed the traffic was real and coming from all over the world.
+      
+Within hours of the VM being exposed, this query was returning thousands of failed-logon attempts per hour from across the public internet. Spot checking source IPs through manual geo-IP lookups confirmed the traffic was real and coming from all over the world.
 
-5. Geo-enrichment via Sentinel Watchlist
-   - Raw SecurityEvent rows contain an IP address but no geographic context. To enrich them inside the SIEM rather than externally, I did a few things:
+### 5. Geo-enrichment via Sentinel Watchlist
+
+Raw SecurityEvent rows contain an IP address but no geographic context. To enrich them inside the SIEM rather than externally, I did a few things:
      * Imported a SCV mapping IP network blocks (CIDR) to city, country, latitude, and longitude as a Sentinel Watchlist (geoip, search key: network).
      * Verified it landed correctly with _GetWatchlist("geoip").
      * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
@@ -191,15 +199,18 @@ The purpose of this lab was to use a SOC data pipeline to record real brute forc
          - | extend AttackerIP = IpAddress
          - | evaluate ipv4_lookup(GeoIPDB, AttackerIP, network)
          - | project TimeGenerated, Computer, AttackerIP, cityname, Countryname, latitude, longitude
-   - Each failed logon now carried geographic context inline, exactly the kind of enrichment a real SOC analyst expects when triaging brute-force activity.
+         
+Each failed logon now carried geographic context inline, exactly the kind of enrichment a real SOC analyst expects when triaging brute-force activity.
 
-6. Attack map visualization
-   - Built a Sentinel Workbook (Windows VM Attack Map) that:
-     - Aggregates failed-logon events by unique combination of attacker IP, latitude, longitude, city, and country (treating each combination as a single attacking entity).
-     - Plots them on a world map with marker size scaled to attempt volume.
-     - Uses a custom FriendlyLocation field (city + country concatenation) for readable labels.
-     - Color palette turned green to red to show high volume sources with deeper contrast.
-   - The resulting workbook surfaces the dominant source countries at a glance, useful to quickly show where brute force attempts are coming from and where they are most prevalent.
+### 6. Attack map visualization
+Built a Sentinel Workbook (Windows VM Attack Map) that:
+
+   - Aggregates failed-logon events by unique combination of attacker IP, latitude, longitude, city, and country (treating each combination as a single attacking entity).
+   - Plots them on a world map with marker size scaled to attempt volume.
+   - Uses a custom FriendlyLocation field (city + country concatenation) for readable labels.
+   - Color palette turned green to red to show high volume sources with deeper contrast.
+     
+The resulting workbook surfaces the dominant source countries at a glance, useful to quickly show where brute force attempts are coming from and where they are most prevalent.
 
 ## **Findings**
 
