@@ -131,18 +131,18 @@ The purpose of this lab was to use a SOC data pipeline to record real brute forc
 
 ## **Architecture**
 
-- Public Internet (attackers) -->
+Public Internet (attackers) -->
       
-- [Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100) -- >
+[Azure NSG] ── inbound: ANY/ANY/ANY (custom DANGER_ rule, priority 100) -- >
        
-- [Windows 10 VM "corpnet-east-1"]
+[Windows 10 VM "corpnet-east-1"]
    * Local Windows Firewall disabled (Domain/Private/Public)
    * Azure Monitor Agent (AMA) extension installed
    *  Security Events forwarded via Data Collection Rule -->
         
-- [Log Analytics Workspace] ──── SecurityEvent table -->
+[Log Analytics Workspace] ──── SecurityEvent table -->
         
-- [Microsoft Sentinel]
+[Microsoft Sentinel]
    * KQL queries against SecurityEvent
    * geoip Watchlist joined on IP → city / country / lat / long
    * Workbook: world map of failed-logon volume by source country
@@ -177,11 +177,12 @@ Verified end-to-end exposure by ping-ing the VM's public IP from a local termina
 ### 4. Hunting failed logons with KQL
 
 Once the SecurityEvent table was populated, I narrowed the noise to failed authentications and projected only the fields that mattered:
-    - Written in KQL
-      - SecurityEvent
-      - | where EventID == 4625 // "An account failed to log on"
-      - | where TimeGenerated > ago(1h)
-      - | project TimeGenerated, Computer, Account, IpAddress, Activity
+
+Written in KQL
+- SecurityEvent
+- | where EventID == 4625 // "An account failed to log on"
+- | where TimeGenerated > ago(1h)
+- | project TimeGenerated, Computer, Account, IpAddress, Activity
       
 Within hours of the VM being exposed, this query was returning thousands of failed-logon attempts per hour from across the public internet. Spot checking source IPs through manual geo-IP lookups confirmed the traffic was real and coming from all over the world.
 
@@ -191,14 +192,15 @@ Raw SecurityEvent rows contain an IP address but no geographic context. To enric
      * Imported a SCV mapping IP network blocks (CIDR) to city, country, latitude, and longitude as a Sentinel Watchlist (geoip, search key: network).
      * Verified it landed correctly with _GetWatchlist("geoip").
      * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
-       - Written in KQL
-         - let GeoIPDB = _GetWatchlist("geoip");
-         - SecurityEvent
-         - | where EventID == 4625
-         - | where IpAddress != "-"
-         - | extend AttackerIP = IpAddress
-         - | evaluate ipv4_lookup(GeoIPDB, AttackerIP, network)
-         - | project TimeGenerated, Computer, AttackerIP, cityname, Countryname, latitude, longitude
+     
+Written in KQL
+- let GeoIPDB = _GetWatchlist("geoip");
+- SecurityEvent
+- | where EventID == 4625
+- | where IpAddress != "-"
+- | extend AttackerIP = IpAddress
+- | evaluate ipv4_lookup(GeoIPDB, AttackerIP, network)
+- | project TimeGenerated, Computer, AttackerIP, cityname, Countryname, latitude, longitude
          
 Each failed logon now carried geographic context inline, exactly the kind of enrichment a real SOC analyst expects when triaging brute-force activity.
 
