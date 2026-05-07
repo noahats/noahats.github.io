@@ -178,11 +178,12 @@ Verified end-to-end exposure by ping-ing the VM's public IP from a local termina
 
 Once the SecurityEvent table was populated, I narrowed the noise to failed authentications and projected only the fields that mattered:
 
-Written in KQL
-- SecurityEvent
-- | where EventID == 4625 // "An account failed to log on"
-- | where TimeGenerated > ago(1h)
-- | project TimeGenerated, Computer, Account, IpAddress, Activity
+```KQL
+SecurityEvent
+| where EventID == 4625 // "An account failed to log on"
+| where TimeGenerated > ago(1h)
+| project TimeGenerated, Computer, Account, IpAddress, Activity
+```
       
 Within hours of the VM being exposed, this query was returning thousands of failed-logon attempts per hour from across the public internet. Spot checking source IPs through manual geo-IP lookups confirmed the traffic was real and coming from all over the world.
 
@@ -192,19 +193,21 @@ Raw SecurityEvent rows contain an IP address but no geographic context. To enric
      * Imported a SCV mapping IP network blocks (CIDR) to city, country, latitude, and longitude as a Sentinel Watchlist (geoip, search key: network).
      * Verified it landed correctly with _GetWatchlist("geoip").
      * Joined SecurityEvent against the watchlist using KQL's IPv4_lookup evaluator to resolve each attacker IP to its containing CIDR block:
-     
-Written in KQL
-- let GeoIPDB = _GetWatchlist("geoip");
-- SecurityEvent
-- | where EventID == 4625
-- | where IpAddress != "-"
-- | extend AttackerIP = IpAddress
-- | evaluate ipv4_lookup(GeoIPDB, AttackerIP, network)
-- | project TimeGenerated, Computer, AttackerIP, cityname, Countryname, latitude, longitude
+
+``` KQL
+let GeoIPDB = _GetWatchlist("geoip");
+SecurityEvent
+| where EventID == 4625
+| where IpAddress != "-"
+| extend AttackerIP = IpAddress
+| evaluate ipv4_lookup(GeoIPDB, AttackerIP, network)
+| project TimeGenerated, Computer, AttackerIP, cityname, Countryname, latitude, longitude
+```
          
 Each failed logon now carried geographic context inline, exactly the kind of enrichment a real SOC analyst expects when triaging brute-force activity.
 
 ### 6. Attack map visualization
+
 Built a Sentinel Workbook (Windows VM Attack Map) that:
 
    - Aggregates failed-logon events by unique combination of attacker IP, latitude, longitude, city, and country (treating each combination as a single attacking entity).
@@ -233,12 +236,12 @@ The resulting workbook surfaces the dominant source countries at a glance, usefu
 
 ## **Limitations & next steps**
 
-* This lab covers the detection and visibility side of a SOC. It did not include:
+This lab covers the detection and visibility side of a SOC. It did not include:
   * Sentinel Analytic Rules to fire alerts on threshold breaches (e.g., >n failed logons from one IP in 5 minutes).
   * Incident creation, assignment, and lifecycle management.
   * Playbooks / SOAR automation (e.g., auto-block source IPs via Logic Apps)
   * Detections beyond EventID 4625 or successful logons after brute force EventID 4624.
-* In future labs, incorporating a larger scope to involve these above points is the next logical step. This lab served as a great opportunity to familiarize what the Azure and Sentinel environments are like and how they may be used in a real enterprise SOC.
+In future labs, incorporating a larger scope to involve these above points is the next logical step. This lab served as a great opportunity to familiarize what the Azure and Sentinel environments are like and how they may be used in a real enterprise SOC.
 
 Built a Microsoft Sentinel lab centered on log ingestion, alerting, and investigation workflows, using a honeypot-style setup to generate security-relevant events for analysis. The project focused on learning how to onboard telemetry, query data, create detections, and use Sentinel as a cloud-native SIEM for practical SOC-style investigations. Also imported data to create a live visual dashboard for login attempts.
 
