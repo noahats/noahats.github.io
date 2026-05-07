@@ -229,7 +229,7 @@ The resulting workbook surfaces the dominant source countries at a glance, usefu
 
 * Time to first attack was short. Within minutes of opening the NSG, the honeypot was being actively scanned and brute-forced.
 * Attempt volume was of a high magnitude that I was not expecting. My obscure endpoint received thousands of logon attempts per hour.
-* Source geography was well distributed. Some countries made more attempts than others, but eventually, traffic was coming from nearly every continent.
+* Source geography was well distributed. Some countries made more attempts than others, but eventually, traffic was coming from all over the world.
 * Attempted usernames matched common brute-force dictionaries. This is a clear argument for renaming default admin accounts and enforcing MFA.
 
 ## **Skills demonstrated**
