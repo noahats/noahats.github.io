@@ -249,11 +249,8 @@ This lab covers the detection and visibility side of a SOC. It did not include:
   * Incident creation, assignment, and lifecycle management.
   * Playbooks / SOAR automation (e.g., auto-block source IPs via Logic Apps)
   * Detections beyond EventID 4625 or successful logons after brute force EventID 4624.
+    
 In future labs, incorporating a larger scope to involve these above points is the next logical step. This lab served as a great opportunity to familiarize what the Azure and Sentinel environments are like and how they may be used in a real enterprise SOC.
-
-Built a Microsoft Sentinel lab centered on log ingestion, alerting, and investigation workflows, using a honeypot-style setup to generate security-relevant events for analysis. The project focused on learning how to onboard telemetry, query data, create detections, and use Sentinel as a cloud-native SIEM for practical SOC-style investigations. Also imported data to create a live visual dashboard for login attempts.
-
-TBC
 
 ---
 
