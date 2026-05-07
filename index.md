@@ -127,7 +127,7 @@ TBC
 
 I built a SOC data pipeline in Azure, inspired by Josh Madakor's Cyber Home Lab walkthrough as a hands-on introduction to Microsoft Sentinel. A deliberately exposed Windows 10 VM serves as a honeypot. An Azure Monitor Agent forwards Windows Security Events to a Log Analytics Workspace. Sentinel ingests and queries this telemetry with KQL. A geolocation watchlist enriches each event with attacker country, city, and coordinates, and a Sentinel Workbook plots failed-logon traffic onto a live world map.
 
-The purpose of this lab was to use a SOC data pipeline to record real brute force attempts, identify such events using a dashboard, and consider prioritization with this type of alert.
+The purpose of this lab was to use a SOC data pipeline to record real brute force attempts, identify such events using a dashboard, and consider taking action with this type of alert.
 
 ## **Architecture**
 
