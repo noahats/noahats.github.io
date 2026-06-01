@@ -1,4 +1,4 @@
-
+### Currently being transitioned to a new site built on the Astro web framework. More updates in near future.
 
 Welcome. I am Noah Ats. 
 
