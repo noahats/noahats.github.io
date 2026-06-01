@@ -40,7 +40,7 @@ Focus: | Security Operations | Threat Detection | Incident Response |
 ###### Pushing boundaries to more accurately simulate live environments.
 <br>
 
-Built a Proxmox-based home server environment to support virtualization, lab isolation, and long-term security experimentation across multiple VMs and services. This server became the foundation for broader SOC/DFIR lab work, including Linux infrastructure, intentionally vulnerable services, SIEM tooling, honeypots, and an evolving narrative-driven environment meant to simulate operational failure, attacker activity, and incident response in a realistic way.
+A mock FinTech startup is exploited after the attacker recognizes operational negligence. Key infrastructure includes Proxmox hosted VMs, OPNsense firewall, Wazuh SIEM + agents, WordPress vulnerable to CVE-2020-25213, payment settlement engine using Python and cron, finance analyst workstation, Velociraptor for DFIR, Cowrie based honeypot in a DMZ, and attacker host. The network is segmented into 4 network bridges: OPNsense, Corporate LAN, SOC, and DMZ. This project experiments with virtualization, isolation, scripting, threat detection, incident response, and forensics. My goal is to push myself further than before by building something bigger and creating an environment modeled after a financial firm to bridge the gap between theory and practice into real-world enterprise landscapes. Expect narrative publication soon.
 
 TBC
 
