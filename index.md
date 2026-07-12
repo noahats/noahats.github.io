@@ -323,7 +323,7 @@ What makes this course stand out is its clear delivery of foundational concepts 
 
 This program serves as a strong launchpad for those exploring cybersecurity and discovering opportunities they may not have considered before. From here, students are encouraged to take initiative: build a portfolio, pursue hands-on labs, earn certifications like CompTIA Security+, and connect with professionals in the industry—online or within their communities. With discipline, curiosity, and deliberate action, a real career in cybersecurity is well within reach.
 
-##### _Completion Date: October 1, 2024_
+
 
 <!--
 
